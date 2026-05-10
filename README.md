@@ -18,6 +18,10 @@ Herramienta web interna DFIR/OSINT para verificar si un dato de identidad (cédu
 ```bash
 cd breach-lookup
 
+# Crear y activar entorno virtual
+python3 -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+
 # Instalar dependencias
 pip install -r requirements.txt
 
