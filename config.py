@@ -10,8 +10,14 @@ class Settings(BaseSettings):
     APP_USERNAME: str = "admin"
     APP_PASSWORD: str = "Terpel2024!"
     ENVIRONMENT: str = "development"
+    PORT: int = 8000
+    CORS_ORIGINS: str = "http://localhost:8000"
 
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
 
 
 settings = Settings()
