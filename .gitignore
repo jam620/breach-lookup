@@ -1,0 +1,28 @@
+# PII data — never commit
+# Datos sensibles — NUNCA al repo
+data/Breach.csv
+data/Breach_Sheet1.csv
+data/breach.db
+*.xlsx
+*.csv
+*.db
+data/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual envs
+venv/
+.venv/

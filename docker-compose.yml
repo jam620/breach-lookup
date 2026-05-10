@@ -1,0 +1,16 @@
+services:
+  breach-lookup:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist SQLite DB and Breach.csv across restarts
+      # Place Breach.csv inside ./data/ before first run
+      - ./data:/app/data
+    environment:
+      - CSV_PATH=./data/Breach.csv
+      - DB_PATH=./data/breach.db
+      - ENVIRONMENT=production
+    env_file:
+      - .env
+    restart: unless-stopped
